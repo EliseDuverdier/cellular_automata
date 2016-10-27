@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Cellular Automata</title>
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" >
+        <link rel="icon" type="image/png" href="/data/favicon.png">
+    </head>
+    <body>
+<h1>elementary cellular automata — pattern generator</h1>
+<form action="../lib/img_3states.php" target="displayFrame" method="get">
+    <fieldset title="Choose your rule or let randomness do it! If a rule is defined, the random option will not be taken into account, enven if checked.">
+        <input type="checkbox" name="random" id="random"><label for="random">Random rule</label>, or
+        <label for="rule">rule</label><input type="number" name="rule" id="rule" value="" min="0" max="134217728">
+    </fieldset>
+
+    <fieldset>
+        <label for="widht">widht</label><input type="number" name="w" id="widht" value="400" min="0" max="1000">
+        <label for="height">height</label><input type="number" name="h" id="height" value="400" min="0" max="1000">
+        <label for="scale">scale</label><input type="number" name="pixel" id="scale" value="" min="1" max="8">
+    </fieldset>
+
+    <fieldset title="If checcked, the first line will consist of three centered dots in states 1, 2, 1.">
+        <input type="checkbox" name="randomstart" id="randomstart"><label for="randomstart">Structured first line ?</label>
+    </fieldset>
+
+    <fieldset title="Choose the color that states 0, 1 and 2 will be.">
+        <input type="color" name="color" value="#000000" id="color"><label for="color">Color 1</label>
+        <input type="color" name="middlecolor" value="#CCFF00" id="color2"><label for="color2">Color 2</label>
+        <input type="color" name="bgcolor" value="#ffffff" id="bgcolor"><label for="bgcolor">Background color</label>
+    </fieldset>
+
+    <fieldset>
+        <input class="submit" type="submit" value="Go !" title="Click to see below ; ctrl-click to open in another tab.">
+        <input class="reset" type="reset" value="reset">
+    </fieldset>
+</form>
+
+<iframe src="../lib/img_3states.php?width=400&amp;height=350" height="400" name="displayFrame"></iframe>
+
+<footer>
+    <p>
+     <a href="displayAll_3states.php">See many rules 2D/3-states automata from random and single-point start lines here !</a>
+     <br />
+     See also : <a href="display.html">2 states elementary cellular automata generator</a>
+    <br />
+    CC (BY SA) Élise Duverdier 2015
+    </p>
+</footer>
+    </body>
+</html>

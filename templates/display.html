@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Cellular Automata</title>
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" >
+        <link rel="icon" type="image/png" href="/data/favicon.png">
+    </head>
+    <body>
+
+<h1>elementary cellular automata — pattern generator</h1>
+<form class="display" action="../lib/img.php" target="displayFrame" method="get">
+    <fieldset>
+        <input type="checkbox" name="random" id="random"><label for="random">Random rule</label>, or
+        <label for="rule">rule</label><input type="number" name="rule" id="rule" value="" min="0" max="256">
+    </fieldset>
+
+    <fieldset>
+        <label for="width">widht</label><input type="number" name="width" id="width" value="300" min="0" max="1000">
+        <label for="height">height</label><input type="number" name="height" id="height" value="300" min="0" max="1000">
+        <label for="scale">scale</label><input type="number" name="pixel" id="scale" value="" min="1" max="8">
+    </fieldset>
+
+    <fieldset>
+        <input type="checkbox" name="randomstart" id="randomstart"><label for="randomstart">Single point on first line ?</label>
+    </fieldset>
+
+    <fieldset>
+        <input type="color" name="color" value="#000000" id="color"><label for="color">Color</label>
+        <input type="color" name="bgcolor" value="#ffffff" placeholder="#ffffff" id="bgcolor"><label for="bgcolor">Background color</label>
+    </fieldset>
+
+    <fieldset>
+        <input class="submit" type="submit" value="Go !">
+        <input class="reset" type="reset" value="reset">
+    </fieldset>
+</form>
+
+<iframe src="../lib/img.php" height="500" name="displayFrame" border="0"></iframe>
+
+<footer>
+    <p>
+     <a href="displayAll.php">See all automata from random and single-point start lines here</a>.
+     <!--((See (all (automata (from (random and (single point)) (start lines))))) here)-->
+     <br />
+     See also: <a href="display_3S.html">3-states elementary cellular automata</a> generator !
+        <br />CC (BY SA) Élise Duverdier 2015
+    </p>
+</footer>
+    </body>
+</html>
